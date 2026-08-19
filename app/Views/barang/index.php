@@ -40,7 +40,7 @@
             <th>Aksi</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-group-divider text-uppercase">
         <?php $no = 1; ?>
         <?php foreach($barang as $row): ?>
             <tr>

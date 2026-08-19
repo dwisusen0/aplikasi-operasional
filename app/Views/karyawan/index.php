@@ -44,9 +44,9 @@
                             <?php $no = 1; foreach($karyawan as $row): ?>
                             <tr>
                                 <td><?= $no++; ?></td>
-                                <td><?= $row['nama']; ?></td>
+                                <td class="text-uppercase"><?= $row['nama']; ?></td>
                                 <td><?= $row['username']; ?></td>
-                                <td><?= $row['jabatan']; ?></td>
+                                <td class="text-capitalize"><?= $row['jabatan']; ?></td>
                                 <td><span class="badge bg-secondary"><?= ucfirst($row['role']); ?></span></td>
                                 <td>
                                     <a href="<?= base_url('karyawan/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau hapus karyawan ini?')">Hapus</a>
