@@ -10,7 +10,7 @@ class KaryawanSeeder extends Seeder
     {
         $data = [
             [
-                'nama'       => 'Administrator Utama',
+                'nama'       => 'Admin',
                 'jabatan'    => 'IT Support / Admin',
                 'role'       => 'admin',
                 'password'   => password_hash('admin123', PASSWORD_BCRYPT),
@@ -18,7 +18,7 @@ class KaryawanSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'nama'       => 'Budi Santoso',
+                'nama'       => 'Budi',
                 'jabatan'    => 'Staff Logistik',
                 'role'       => 'staff',
                 'password'   => password_hash('staff123', PASSWORD_BCRYPT),
