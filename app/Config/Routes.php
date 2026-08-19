@@ -15,8 +15,5 @@ $routes->post('barang/store', 'Barang::store', ['filter' => 'auth']);
 $routes->get('barang/delete/(:num)', 'Barang::delete/$1', ['filter' => 'auth']);
 $routes->get('karyawan', 'Karyawan::index');
 $routes->get('karyawan/create', 'Karyawan::create');
-<<<<<<< HEAD
 $routes->post('karyawan/store', 'Karyawan::store', ['filter' => 'auth']);
-=======
 $routes->post('karyawan/store', 'Karyawan::store', ['filter' => 'auth']);
->>>>>>> 1d7c89a (pesan perubahan anda di sini)
