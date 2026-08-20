@@ -38,7 +38,7 @@ class Auth extends BaseController
                     'isLoggedIn'  => true,
                 ];
                 $session->set($sessionData);
-                
+
                 return redirect()->to('/dashboard');
             } else {
                 $session->setFlashdata('error', 'Password yang kamu masukkan salah!');

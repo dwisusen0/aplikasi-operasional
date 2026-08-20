@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-light">
 
     <!-- Navbar -->
@@ -22,7 +24,7 @@
             <a href="<?= base_url('karyawan/create'); ?>" class="btn btn-primary btn-sm">+ Tambah Karyawan</a>
         </div>
 
-        <?php if(session()->getFlashdata('success')): ?>
+        <?php if (session()->getFlashdata('success')): ?>
             <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
         <?php endif; ?>
 
@@ -41,17 +43,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $no = 1; foreach($karyawan as $row): ?>
-                            <tr>
-                                <td><?= $no++; ?></td>
-                                <td class="text-uppercase"><?= $row['nama']; ?></td>
-                                <td><?= $row['username']; ?></td>
-                                <td class="text-capitalize"><?= $row['jabatan']; ?></td>
-                                <td><span class="badge bg-secondary"><?= ucfirst($row['role']); ?></span></td>
-                                <td>
-                                    <a href="<?= base_url('karyawan/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau hapus karyawan ini?')">Hapus</a>
-                                </td>
-                            </tr>
+                            <?php $no = 1;
+                            foreach ($karyawan as $row): ?>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td class="text-capitalize"><?= $row['nama']; ?></td>
+                                    <td><?= $row['username']; ?></td>
+                                    <td class="text-capitalize"><?= $row['jabatan']; ?></td>
+                                    <td><span class="badge bg-secondary"><?= ucfirst($row['role']); ?></span></td>
+                                    <td>
+                                        <a href="<?= base_url('karyawan/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau hapus karyawan ini?')">Hapus</a>
+                                    </td>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -61,4 +64,5 @@
     </div>
 
 </body>
+
 </html>

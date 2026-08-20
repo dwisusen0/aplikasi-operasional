@@ -13,7 +13,7 @@ $routes->get('barang', 'Barang::index', ['filter' => 'auth']);
 $routes->get('barang/create', 'Barang::create', ['filter' => 'auth']);
 $routes->post('barang/store', 'Barang::store', ['filter' => 'auth']);
 $routes->get('barang/delete/(:num)', 'Barang::delete/$1', ['filter' => 'auth']);
-$routes->get('karyawan', 'Karyawan::index');
+$routes->get('karyawan', 'Karyawan::index', ['filter' => 'auth']);
 $routes->get('karyawan/create', 'Karyawan::create');
 $routes->post('karyawan/store', 'Karyawan::store', ['filter' => 'auth']);
 $routes->post('karyawan/store', 'Karyawan::store', ['filter' => 'auth']);
